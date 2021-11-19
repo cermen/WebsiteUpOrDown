@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL 접속 가능 여부 검증</title>
+    <style type="text/css">
+        .notice {
+            font-size: small;
+        }
+
+        .tag {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>URL 접속 가능 여부 검증</h1>
+
+    <div class='tag' id="one-url-form">
+        <form action="\check" method="post" id="one-url">
+            URL을 입력하세요<br>
+            <input type="text" id="url" name="url">
+            <input type="submit" value="검증">
+        </form>
+        <div class='notice'>- URL 표준 양식(http://, https://)을 지켜주세요.</div>
+        <div class='notice'>- URL에 따라 로딩 시간이 길어질 수 있습니다.</div>
+    </div>
+
+    <div class='tag' id="multi-url-form">
+        <form action="" method="post" id="multi-url" enctype="multipart/form-data">
+            파일로 일괄 확인하기<br>
+            <input type="file" name="check_file" id="check_file" accept=".csv,.xls,.xlsx,.txt"><br>
+            <input type="submit" value="업로드 및 검증">
+        </form>
+        <div class='notice'>- 파일 내 URL 내용에 따라 다운로드 시간이 길어질 수 있습니다.</div>
+    </div>
+
+    <div class='tag notice'>
+        파일 형태는 .csv, .xlsx, .txt로<br>
+        아래와 같은 형태로 업로드하세요.<br>
+        (최대 10,000줄까지)<br>
+        <img src="static/example.png" alt="파일 예시" width="300">
+    </div>
+</body>
+</html>
